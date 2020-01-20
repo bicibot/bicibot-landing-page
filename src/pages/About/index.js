@@ -9,14 +9,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// const BackgroundContainer = styled(Box)`
-//   background-image: url(${c});
-//   height: 700px;
-//   width: 100%;
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: auto;
-// `;
+const BackgroundContainer = styled.div`
+  background-image: url(${c});
+  height: 700px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+`;
 
 const HeaderTextContainer = styled.div`
   color: rgb(90, 49, 248);
@@ -86,12 +86,16 @@ export default function About() {
           </Col>
         </Row>
         <Row className="justify-content-md-center">
+          <Col style={{ paddingLeft: "0px", paddingRight: "0px" }}>
+            <BackgroundContainer />
+          </Col>
+        </Row>
+        <Row className="justify-content-md-center">
           <Col lg="6">
             <p
               style={{
                 color: "rgb(155, 155, 155)",
                 fontSize: "18px",
-                marginTop: "40px",
                 textAlign: "center"
               }}
             >
