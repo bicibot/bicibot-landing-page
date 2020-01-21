@@ -22,6 +22,9 @@ export default function NavigationBar() {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
           <Nav>
+            <LinkContainer to="/estatisticas">
+            <Nav.Link>Estátisticas</Nav.Link>
+            </LinkContainer>
             <LinkContainer to="/implemente">
             <Nav.Link>Implemente na sua Cidade</Nav.Link>
             </LinkContainer>
