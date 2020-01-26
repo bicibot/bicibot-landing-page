@@ -102,7 +102,7 @@ export default function Statistics() {
           </Col>
         </Row>
         <Row className="justify-content-md-center">
-          <Col lg="auto" style={{ padding: "0px" }}>
+          <Col lg="auto">
             <Tabs activeKey={key} onSelect={k => setKey(k)} variant="statistics-tab">
               <Tab eventKey="geral" title="Geral">
                 <Row className="justify-content-md-center">
@@ -142,7 +142,7 @@ export default function Statistics() {
                       dayBorderColor="#ffffff"
                       legends={[
                         {
-                          anchor: 'bottom-right',
+                          anchor: 'bottom-left',
                           direction: 'row',
                           translateY: 36,
                           itemCount: 4,
