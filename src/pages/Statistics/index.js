@@ -7,7 +7,7 @@ import {
   BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
 } from 'recharts';
 
-import { Calendar } from '@nivo/calendar'
+import { ResponsiveCalendar } from '@nivo/calendar'
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -109,13 +109,11 @@ export default function Statistics() {
                       </BarChart>
                     </ResponsiveContainer>
                   </Col>
-                  <Col lg="auto">
-                    <Calendar
+                  <Col lg="auto" style={{height:"400px", width:"100%"}}>
+                    <ResponsiveCalendar
                       data={calendarData}
                       from="2019-09-24"
                       to="2020-01-20"
-                      width={1000}
-                      height={600}
                       emptyColor="#eeeeee"
                       colors={['#61cdbb', '#97e3d5', '#e8c1a0', '#f47560']}
                       margin={{ top: 40, right: 40, bottom: 40, left: 40 }}
