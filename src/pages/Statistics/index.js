@@ -59,7 +59,7 @@ export default function Statistics() {
       }, [])
 
       const timeData = result.data.reduce((hours, r) => {
-        let reportHour = new Date(r.createdAt).getHours().toString()+'h';
+        let reportHour = new Date(r.createdAt).getHours().toString() + 'h';
         if (!hours.some(h => h.hour === reportHour)) {
           hours.push({ hour: reportHour, 'denúncias': 0 })
         }
@@ -69,6 +69,8 @@ export default function Statistics() {
 
         return hours;
       }, [])
+
+      timeData.sort((h, h2) => h.hour.split('h')[0] - h2.hour.split('h')[0])
 
       vehicles.forEach(v => {
         if (v !== undefined) {
@@ -104,11 +106,11 @@ export default function Statistics() {
             <Tabs activeKey={key} onSelect={k => setKey(k)} variant="statistics-tab">
               <Tab eventKey="geral" title="Geral">
                 <Row className="justify-content-md-center">
-                  <Col lg="auto">
+                  <Col lg="2" style={{ justifyContent: "center", display: "flex" }}>
                     <Counter total={data.length} />
                   </Col>
-                  <Col lg="auto">
-                    <ResponsiveContainer height={300} aspect={1}>
+                  <Col lg="6" style={{ width: '100%', height: 300 }}>
+                    <ResponsiveContainer>
                       <BarChart
                         data={vehiData}
                         margin={{
@@ -125,7 +127,7 @@ export default function Statistics() {
                       </BarChart>
                     </ResponsiveContainer>
                   </Col>
-                  <Col lg="auto" className="mr-10" style={{ height: "400px", width: "100%" }}>
+                  <Col lg="6" className="mr-10" style={{ height: "400px", width: "100%" }}>
                     <ResponsiveCalendar
                       data={calendarData}
                       from="2019-09-24"
@@ -151,7 +153,7 @@ export default function Statistics() {
                         }
                       ]} />
                   </Col>
-                  <Col lg="auto" className="mr-10" style={{ height: "400px", width: "100%" }}>
+                  <Col lg="6" className="mr-10" style={{ height: "400px", width: "100%" }}>
                     <ResponsiveBar
                       data={timeData}
                       keys={['denúncias']}
