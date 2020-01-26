@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import Lottie from "react-lottie";
-import ReactMapGL, { Marker } from "react-map-gl";
+import ReactMapGL, { Marker, GeolocateControl } from "react-map-gl";
 
 import marker from "../../assets/marker.svg";
 import bg from "../../assets/bg.svg";
@@ -36,6 +36,13 @@ const Home = () => {
     }
   };
 
+  const geolocateStyle = {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    margin: 10
+  };
+
   useEffect(() => {
     const fetchReports = async () => {
       setIsLoading(true);
@@ -53,20 +60,23 @@ const Home = () => {
         let longitude = pos.coords.longitude
         let latitude = pos.coords.latitude;
         if (mapRef.current) {
-          mapRef.current.getMap().flyTo({
-            center: [longitude, latitude],
-            zoom: 10,
-            speed: 1,
-            easing(t) {
-              return t;
-            }})
-            setViewport({
-              latitude: latitude,
-              longitude: longitude,
+          mapRef.current
+            .getMap()
+            .flyTo({
+              center: [longitude, latitude],
               zoom: 10,
-              width: "100%",
-              height: "500px"
+              speed: 1,
+              easing(t) {
+                return t;
+              }
             })
+          setViewport({
+            latitude: latitude,
+            longitude: longitude,
+            zoom: 10,
+            width: "100%",
+            height: "500px"
+          })
           console.log(latitude, longitude)
         }
       }, (err) => {
@@ -133,6 +143,11 @@ const Home = () => {
                   }}
                   ref={mapRef}
                 >
+                  <GeolocateControl
+                    style={geolocateStyle}
+                    positionOptions={{ enableHighAccuracy: true }}
+                    trackUserLocation={true}
+                  />
                   {data.map(report => (
                     <Marker
                       key={report._id}
