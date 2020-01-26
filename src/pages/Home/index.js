@@ -51,40 +51,8 @@ const Home = () => {
       setIsLoading(false);
     };
 
-    const fetchLocation = () => {
-      const options = {
-        enableHighAccuracy: true
-      }
-
-      navigator.geolocation.getCurrentPosition((pos) => {
-        let longitude = pos.coords.longitude
-        let latitude = pos.coords.latitude;
-        if (mapRef.current) {
-          mapRef.current
-            .getMap()
-            .flyTo({
-              center: [longitude, latitude],
-              zoom: 10,
-              speed: 1,
-              easing(t) {
-                return t;
-              }
-            })
-          setViewport({
-            latitude: latitude,
-            longitude: longitude,
-            zoom: 10,
-            width: "100%",
-            height: "500px"
-          })
-          console.log(latitude, longitude)
-        }
-      }, (err) => {
-        console.log(err)
-      }, options)
-    }
     fetchReports();
-    fetchLocation();
+
   }, []);
   return (
     <>
