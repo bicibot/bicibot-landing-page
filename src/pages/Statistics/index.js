@@ -76,8 +76,6 @@ export default function Statistics() {
         }
       })
 
-      console.log(timeData);
-
       setTimeData(timeData);
       setCalendarData(calendarData);
       setVehiData(vehiData)
