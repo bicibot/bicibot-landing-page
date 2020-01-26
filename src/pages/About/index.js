@@ -61,13 +61,6 @@ const Recife = styled.div`
   background-size: auto;
 `;
 
-const Ciclista = styled.img`
-  height: 700px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-`;
 export default function About() {
   return (
     <>
