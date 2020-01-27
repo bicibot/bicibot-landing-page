@@ -83,6 +83,11 @@ const StatisticsBuilder = (props) => {
                     monthBorderColor="#ffffff"
                     dayBorderWidth={2}
                     dayBorderColor="#ffffff"
+                    tooltip={({ day, value, color }) => (
+                        <strong style={{ color }}>
+                            {new Date(day).toLocaleDateString("pt-BR")}: {value}
+                        </strong>
+                    )}
                     legends={[
                         {
                             anchor: 'bottom-left',
@@ -105,6 +110,7 @@ const StatisticsBuilder = (props) => {
                     padding={0.3}
                     axisTop={null}
                     axisRight={null}
+                    colors={['#5a30f8', '#97e3d5', '#e8c1a0', '#f47560']}
                     axisBottom={{
                         tickSize: 5,
                         tickPadding: 5,
@@ -123,33 +129,15 @@ const StatisticsBuilder = (props) => {
                     }}
                     labelSkipWidth={12}
                     labelSkipHeight={12}
-                    legends={[
-                        {
-                            dataFrom: 'keys',
-                            anchor: 'bottom-right',
-                            direction: 'column',
-                            justify: false,
-                            translateX: 120,
-                            translateY: 0,
-                            itemsSpacing: 2,
-                            itemWidth: 100,
-                            itemHeight: 20,
-                            itemDirection: 'left-to-right',
-                            itemOpacity: 0.85,
-                            symbolSize: 20,
-                            effects: [
-                                {
-                                    on: 'hover',
-                                    style: {
-                                        itemOpacity: 1
-                                    }
-                                }
-                            ]
-                        }
-                    ]}
+                    labelTextColor={"#fff"}
                     animate={true}
                     motionStiffness={90}
                     motionDamping={15}
+                    tooltip={({ id, value, color }) => (
+                        <strong style={{ color }}>
+                            Número de Denúncias: {value}
+                        </strong>
+                    )}
                 />
             </Col>
         </Row>
