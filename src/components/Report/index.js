@@ -13,7 +13,6 @@ const ReportContainer = styled.div`
   span:first-of-type {
     font-size: 14px;
     font-weight: 500;
-    margin-top: 14px;
   }
 `;
 
@@ -30,13 +29,17 @@ export default function Report(props) {
     <ReportContainer>
       <div style={{ display: "flex", flexDirection: "row" }}>
         <ReportAvatar />
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <div style={{ display: "flex", flexDirection: "column", marginTop: "14px" }}>
           <span>Bicibot</span>
-          <span
-            style={{ fontSize: "12px", lineHeight: "14px", color: "#BBBBBB" }}
-          >
-            @bicibot_sp
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <span
+              style={{ fontSize: "12px", lineHeight: "14px", color: "#BBBBBB", marginRight:"10px" }}>
+              @bicibot_sp
           </span>
+            <span style={{ fontSize: "12px", lineHeight: "14px", color: "#BBBBBB", fontWeight:"bold"}}>
+              {new Date(props.reportData.createdAt).toLocaleDateString("pt-BR")}
+            </span>
+          </div>
         </div>
       </div>
       <div
@@ -46,10 +49,12 @@ export default function Report(props) {
           fontSize: "12px",
           whiteSpace: "nowrap",
           overflow: "hidden",
-          textOverflow: "ellipsis"
+          textOverflow: "ellipsis",
         }}
       >
-        <p>{props.report}</p>
+        <p>{props.reportData.city}</p>
+        <p>{props.reportData.report_type}</p>
+        <p>{props.reportData.description}</p>
       </div>
     </ReportContainer>
   );

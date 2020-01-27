@@ -17,6 +17,7 @@ import { LinkContainer } from "react-router-bootstrap";
 
 const Home = () => {
   const [data, setData] = useState([]);
+  const [lastReports, setLastReports] = useState([{},{},{}]);
   const [isLoading, setIsLoading] = useState(false);
   const [viewport, setViewport] = useState({
     latitude: -23.5489,
@@ -53,8 +54,13 @@ const Home = () => {
     };
 
     fetchReports();
-
   }, []);
+
+  useEffect(() => {
+    if (data.length > 0) {
+      setLastReports(data.slice(0, 3))
+    }
+  }, [data])
   return (
     <>
       <Container fluid="true">
@@ -81,13 +87,13 @@ const Home = () => {
         </h1>
           </Col>
           <Col lg={3} md="true">
-            <Report />
+            <Report reportData={lastReports[0]} />
           </Col>
           <Col lg={3} md="true">
-            <Report />
+            <Report reportData={lastReports[1]} />
           </Col>
           <Col lg={3} md="true">
-            <Report />
+            <Report reportData={lastReports[2]} />
           </Col>
         </Row>
         <Row className="justify-content-md-center">
