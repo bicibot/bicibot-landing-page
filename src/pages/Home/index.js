@@ -12,6 +12,7 @@ import Counter from "../../components/Counter"
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Report from "../../components/Report";
+import { LinkContainer } from "react-router-bootstrap";
 
 
 const Home = () => {
@@ -65,7 +66,11 @@ const Home = () => {
                 Use a bicibot para fazer sua denúncia. Os dados nos ajudam a compreender os problemas e cobrar mudanças.
           </h6>
               <Button variant="purple">Denuncie</Button>
-              <Button variant="outline-yellow">Sobre Nós</Button>
+              <LinkContainer to="/sobre-nos">
+                <Button variant="outline-yellow">
+                  Sobre Nós
+              </Button>
+              </LinkContainer>
             </div>
           </Col>
         </Row>
@@ -151,7 +156,11 @@ const Home = () => {
                 Dados sobre locais onde há maior perigo nas vias para ciclistas,
       sobre invasão e falta de manutenção em ciclovias e ciclofaixas
           </p>
-              <Button variant="purple">Em Construção</Button>
+              <LinkContainer to="/estatisticas">
+                <Button variant="purple">
+                  Estátisticas
+          </Button>
+              </LinkContainer>
             </div>
           </Col>
         </Row>
@@ -166,9 +175,11 @@ const Home = () => {
               <Button href="https://github.com/bicibot" variant="white">
                 Github
           </Button>
-              <Button href="https://bicibot.org/implemente" variant="outline-white">
-                Saiba Mais
-          </Button>
+              <LinkContainer to="/implemente">
+                <Button variant="outline-white">
+                  Saiba Mais
+                </Button>
+              </LinkContainer>
             </div>
           </div>
         </Row>
