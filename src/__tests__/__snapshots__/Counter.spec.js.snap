@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component Matches the snapshot 1`] = `
+<div
+  className="sc-htpNat dFcVJV"
+>
+  <div
+    className="sc-bwzfXH fpBhud"
+  >
+    <div
+      className="sc-bdVaJa qkxPG"
+    >
+      4
+    </div>
+    <div
+      className="sc-bdVaJa qkxPG"
+    >
+      0
+    </div>
+    <div
+      className="sc-bdVaJa qkxPG"
+    >
+      2
+    </div>
+  </div>
+  <h2>
+    denúncias
+  </h2>
+</div>
+`;

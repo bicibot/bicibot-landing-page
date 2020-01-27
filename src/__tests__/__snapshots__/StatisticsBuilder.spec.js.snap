@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component Matches the snapshot 1`] = `
+<div
+  className="justify-content-md-center row"
+  style={
+    Object {
+      "marginTop": "50px",
+    }
+  }
+>
+  <div
+    className="col-lg-2"
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "center",
+        "textAlign": "center",
+      }
+    }
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "height": "fit-content",
+        }
+      }
+    >
+      <div
+        className="sc-htpNat dFcVJV"
+      >
+        <div
+          className="sc-bwzfXH fpBhud"
+        >
+          <div
+            className="sc-bdVaJa qkxPG"
+          >
+            1
+          </div>
+        </div>
+        <h2>
+          denúncias
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-lg-6"
+    style={
+      Object {
+        "height": 300,
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      className="recharts-responsive-container"
+      id="undefined"
+      style={
+        Object {
+          "height": "100%",
+          "maxHeight": undefined,
+          "minHeight": undefined,
+          "minWidth": undefined,
+          "width": "100%",
+        }
+      }
+    >
+      <div />
+    </div>
+  </div>
+  <div
+    className="mr-10 col-lg-6"
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+  <div
+    className="mr-10 col-lg-6"
+    style={
+      Object {
+        "height": "400px",
+        "width": "100%",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

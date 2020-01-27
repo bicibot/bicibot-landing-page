@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter component Matches the snapshot 1`] = `
+Array [
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "column",
+        "marginTop": "60px",
+        "textAlign": "center",
+      }
+    }
+  >
+    <h2
+      style={
+        Object {
+          "color": "#FFC700",
+          "fontSize": "36px",
+          "lineHeight": "42px",
+        }
+      }
+    >
+      Acompanhe nossas redes
+    </h2>
+    <p
+      style={
+        Object {
+          "color": "#9B9B9B",
+          "fontSize": "18px",
+          "padding": "50px",
+        }
+      }
+    >
+      O canal faz uma publicação do Twitter a cada novo registro e reporta a demanda aos órgãos responsáveis.
+    </p>
+  </div>,
+  <div
+    className="sc-htpNat hHCByx"
+  >
+    <div
+      className="sc-bdVaJa dzHwag"
+    >
+      <a
+        className="sc-bwzfXH jmuFWB"
+        href="https://m.me/bicibot"
+      />
+    </div>
+    <div
+      className="sc-bdVaJa dzHwag"
+    >
+      <a
+        className="sc-bwzfXH bApdWN"
+        href="https://twitter.com/bicibot"
+      />
+    </div>
+    <div
+      className="sc-bdVaJa dzHwag"
+    >
+      <a
+        className="sc-bwzfXH FJBKG"
+        href="https://t.me/a_bicibot"
+      />
+    </div>
+    <div
+      className="sc-bdVaJa dzHwag"
+    >
+      <a
+        className="sc-bwzfXH eIYIWs"
+        href="https://github.com/bicibot"
+      />
+    </div>
+  </div>,
+]
+`;
