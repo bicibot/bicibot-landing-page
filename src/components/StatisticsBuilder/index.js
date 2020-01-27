@@ -1,6 +1,7 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 import Counter from "../../components/Counter"
 import {
     BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
@@ -48,9 +49,11 @@ const StatisticsBuilder = (props) => {
     })
 
     return (
-        <Row className="justify-content-md-center">
-            <Col lg="2" style={{ justifyContent: "center", display: "flex" }}>
+        <Row className="justify-content-md-center" style={{marginTop: "50px"}}>
+            <Col lg="2" style={{ justifyContent: "center", display: "flex", textAlign: "center" }}>
+            <Card style={{height:"fit-content"}}>
                 <Counter total={props.data.length} />
+                </Card>
             </Col>
             <Col lg="6" style={{ width: '100%', height: 300 }}>
                 <ResponsiveContainer>

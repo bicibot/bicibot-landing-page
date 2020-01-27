@@ -14,6 +14,9 @@ const NumberContainer = styled.div`
   color: #5a31f8;
   font-size: 64px;
   font-weight: bold;
+  &:last-of-type {
+    margin-right: 0px;
+  }
 `;
 
 const CounterContainer = styled.div`
